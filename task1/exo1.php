@@ -2,7 +2,7 @@
 /*TASK 1*/
 function displayArticlePreview($fullText, $linkToFullText, $maxChar = 200){
     if(strlen($fullText)>$maxChar){
-        $fullText = strip_tags($fullText);
+        $fullText = strip_tags($fullText); // strip tags to avoid breaking any html
         $textCut = substr($fullText, 0, $maxChar);
         $endPoint = strrpos($textCut, ' ');
         //if the string contain any space then it will cut without word basis
